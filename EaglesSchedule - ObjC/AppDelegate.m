@@ -16,7 +16,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self setupLandingView];
+    [self setupNavBar];
     return YES;
 }
 
@@ -47,5 +48,17 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)setupLandingView{
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ScheduleViewController alloc] init]];
+    [self.window makeKeyAndVisible];
+}
+
+- (void)setupNavBar{
+    [[UINavigationBar appearance] setBarTintColor:[ColorUtil eaglesMidnightGreen]];
+    [[UINavigationBar appearance] setTranslucent:false];
+    [[UINavigationBar appearance] setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName: [UIFont fontWithName:FONT_LEAGUE_GOTHIC size:25.0f]}];
+}
 
 @end

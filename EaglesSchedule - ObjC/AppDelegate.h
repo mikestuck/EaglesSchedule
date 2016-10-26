@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ScheduleViewController.h"
+#import "ColorUtil.h"
+#import "Constants.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

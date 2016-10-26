@@ -7,25 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FC486C41DBFF16B000005F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC486C31DBFF16B000005F3 /* main.m */; };
 		3FC486C71DBFF16B000005F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC486C61DBFF16B000005F3 /* AppDelegate.m */; };
-		3FC486CA1DBFF16B000005F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC486C91DBFF16B000005F3 /* ViewController.m */; };
-		3FC486CD1DBFF16B000005F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC486CB1DBFF16B000005F3 /* Main.storyboard */; };
 		3FC486CF1DBFF16B000005F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC486CE1DBFF16B000005F3 /* Assets.xcassets */; };
-		3FC486D21DBFF16B000005F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC486D01DBFF16B000005F3 /* LaunchScreen.storyboard */; };
+		3FC486FD1DBFF4DE000005F3 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC486FC1DBFF4DE000005F3 /* Team.m */; };
+		3FC487001DBFF514000005F3 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC486FF1DBFF514000005F3 /* Game.m */; };
+		3FC487061DBFF5BE000005F3 /* APIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC487051DBFF5BE000005F3 /* APIUtil.m */; };
+		3FC487091DBFF5D5000005F3 /* ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC487081DBFF5D5000005F3 /* ColorUtil.m */; };
+		3FC487141DBFF7DB000005F3 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC487131DBFF7DB000005F3 /* Constants.m */; };
+		3FC487181DBFF849000005F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC487171DBFF849000005F3 /* main.m */; };
+		3FC4871C1DBFF857000005F3 /* LeagueGothic-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC487191DBFF857000005F3 /* LeagueGothic-Regular.otf */; };
+		3FC4871D1DBFF857000005F3 /* Maven Pro Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4871A1DBFF857000005F3 /* Maven Pro Bold.otf */; };
+		3FC4871E1DBFF857000005F3 /* Maven Pro Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4871B1DBFF857000005F3 /* Maven Pro Regular.otf */; };
+		3FC4872B1DC004C4000005F3 /* ScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4872A1DC004C4000005F3 /* ScheduleTableViewCell.m */; };
+		3FC4872F1DC00514000005F3 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4872E1DC00514000005F3 /* ScheduleViewController.m */; };
+		3FC487361DC0228F000005F3 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC487351DC0228F000005F3 /* XMLReader.m */; };
+		3FC487381DC067F3000005F3 /* ScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC487371DC067F3000005F3 /* ScheduleCell.xib */; };
+		3FC4873B1DC0728B000005F3 /* Date.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4873A1DC0728B000005F3 /* Date.m */; };
+		3FC4873E1DC07C33000005F3 /* TimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4873D1DC07C33000005F3 /* TimeUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3FC486BF1DBFF16B000005F3 /* EaglesSchedule - ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EaglesSchedule - ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FC486C31DBFF16B000005F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FC486C51DBFF16B000005F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FC486C61DBFF16B000005F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3FC486C81DBFF16B000005F3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3FC486C91DBFF16B000005F3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3FC486CC1DBFF16B000005F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FC486CE1DBFF16B000005F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3FC486D11DBFF16B000005F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FC486D31DBFF16B000005F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC486FB1DBFF4DE000005F3 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Team.h; path = Models/Team.h; sourceTree = "<group>"; };
+		3FC486FC1DBFF4DE000005F3 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Team.m; path = Models/Team.m; sourceTree = "<group>"; };
+		3FC486FE1DBFF514000005F3 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = Models/Game.h; sourceTree = "<group>"; };
+		3FC486FF1DBFF514000005F3 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Game.m; path = Models/Game.m; sourceTree = "<group>"; };
+		3FC487041DBFF5BE000005F3 /* APIUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIUtil.h; path = Utilities/APIUtil.h; sourceTree = "<group>"; };
+		3FC487051DBFF5BE000005F3 /* APIUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIUtil.m; path = Utilities/APIUtil.m; sourceTree = "<group>"; };
+		3FC487071DBFF5D5000005F3 /* ColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorUtil.h; path = Utilities/ColorUtil.h; sourceTree = "<group>"; };
+		3FC487081DBFF5D5000005F3 /* ColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorUtil.m; path = Utilities/ColorUtil.m; sourceTree = "<group>"; };
+		3FC487121DBFF7DB000005F3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "Supporting Files/Constants.h"; sourceTree = "<group>"; };
+		3FC487131DBFF7DB000005F3 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = "Supporting Files/Constants.m"; sourceTree = "<group>"; };
+		3FC487171DBFF849000005F3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
+		3FC487191DBFF857000005F3 /* LeagueGothic-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LeagueGothic-Regular.otf"; path = "Fonts/LeagueGothic-Regular.otf"; sourceTree = "<group>"; };
+		3FC4871A1DBFF857000005F3 /* Maven Pro Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maven Pro Bold.otf"; path = "Fonts/Maven Pro Bold.otf"; sourceTree = "<group>"; };
+		3FC4871B1DBFF857000005F3 /* Maven Pro Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maven Pro Regular.otf"; path = "Fonts/Maven Pro Regular.otf"; sourceTree = "<group>"; };
+		3FC487291DC004C4000005F3 /* ScheduleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleTableViewCell.h; path = "EaglesSchedule - ObjC/Cells/ScheduleTableViewCell.h"; sourceTree = "<group>"; };
+		3FC4872A1DC004C4000005F3 /* ScheduleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleTableViewCell.m; path = "EaglesSchedule - ObjC/Cells/ScheduleTableViewCell.m"; sourceTree = "<group>"; };
+		3FC4872D1DC00514000005F3 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleViewController.h; path = "Data Controllers/ScheduleViewController.h"; sourceTree = "<group>"; };
+		3FC4872E1DC00514000005F3 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleViewController.m; path = "Data Controllers/ScheduleViewController.m"; sourceTree = "<group>"; };
+		3FC487341DC0228F000005F3 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLReader.h; path = Helpers/XMLReader.h; sourceTree = "<group>"; };
+		3FC487351DC0228F000005F3 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLReader.m; path = Helpers/XMLReader.m; sourceTree = "<group>"; };
+		3FC487371DC067F3000005F3 /* ScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScheduleCell.xib; path = "EaglesSchedule - ObjC/Cells/ScheduleCell.xib"; sourceTree = "<group>"; };
+		3FC487391DC0728B000005F3 /* Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Date.h; path = Models/Date.h; sourceTree = "<group>"; };
+		3FC4873A1DC0728B000005F3 /* Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Date.m; path = Models/Date.m; sourceTree = "<group>"; };
+		3FC4873C1DC07C33000005F3 /* TimeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeUtil.h; path = Utilities/TimeUtil.h; sourceTree = "<group>"; };
+		3FC4873D1DC07C33000005F3 /* TimeUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeUtil.m; path = Utilities/TimeUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +91,13 @@
 			children = (
 				3FC486C51DBFF16B000005F3 /* AppDelegate.h */,
 				3FC486C61DBFF16B000005F3 /* AppDelegate.m */,
-				3FC486C81DBFF16B000005F3 /* ViewController.h */,
-				3FC486C91DBFF16B000005F3 /* ViewController.m */,
-				3FC486CB1DBFF16B000005F3 /* Main.storyboard */,
+				3FC486F71DBFF429000005F3 /* Models */,
+				3FC487281DC00481000005F3 /* Cells */,
+				3FC4872C1DC004D6000005F3 /* Data Controllers */,
+				3FC486FA1DBFF441000005F3 /* Utilities */,
+				3FC4870B1DBFF654000005F3 /* Fonts */,
+				3FC487301DC0223C000005F3 /* Helpers */,
 				3FC486CE1DBFF16B000005F3 /* Assets.xcassets */,
-				3FC486D01DBFF16B000005F3 /* LaunchScreen.storyboard */,
 				3FC486D31DBFF16B000005F3 /* Info.plist */,
 				3FC486C21DBFF16B000005F3 /* Supporting Files */,
 			);
@@ -74,9 +107,76 @@
 		3FC486C21DBFF16B000005F3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3FC486C31DBFF16B000005F3 /* main.m */,
+				3FC487171DBFF849000005F3 /* main.m */,
+				3FC487121DBFF7DB000005F3 /* Constants.h */,
+				3FC487131DBFF7DB000005F3 /* Constants.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3FC486F71DBFF429000005F3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3FC486FB1DBFF4DE000005F3 /* Team.h */,
+				3FC486FC1DBFF4DE000005F3 /* Team.m */,
+				3FC486FE1DBFF514000005F3 /* Game.h */,
+				3FC486FF1DBFF514000005F3 /* Game.m */,
+				3FC487391DC0728B000005F3 /* Date.h */,
+				3FC4873A1DC0728B000005F3 /* Date.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		3FC486FA1DBFF441000005F3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3FC487041DBFF5BE000005F3 /* APIUtil.h */,
+				3FC487051DBFF5BE000005F3 /* APIUtil.m */,
+				3FC487071DBFF5D5000005F3 /* ColorUtil.h */,
+				3FC487081DBFF5D5000005F3 /* ColorUtil.m */,
+				3FC4873C1DC07C33000005F3 /* TimeUtil.h */,
+				3FC4873D1DC07C33000005F3 /* TimeUtil.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		3FC4870B1DBFF654000005F3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3FC487191DBFF857000005F3 /* LeagueGothic-Regular.otf */,
+				3FC4871A1DBFF857000005F3 /* Maven Pro Bold.otf */,
+				3FC4871B1DBFF857000005F3 /* Maven Pro Regular.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		3FC487281DC00481000005F3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3FC487371DC067F3000005F3 /* ScheduleCell.xib */,
+				3FC487291DC004C4000005F3 /* ScheduleTableViewCell.h */,
+				3FC4872A1DC004C4000005F3 /* ScheduleTableViewCell.m */,
+			);
+			name = Cells;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		3FC4872C1DC004D6000005F3 /* Data Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4872D1DC00514000005F3 /* ScheduleViewController.h */,
+				3FC4872E1DC00514000005F3 /* ScheduleViewController.m */,
+			);
+			name = "Data Controllers";
+			sourceTree = "<group>";
+		};
+		3FC487301DC0223C000005F3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3FC487341DC0228F000005F3 /* XMLReader.h */,
+				3FC487351DC0228F000005F3 /* XMLReader.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +238,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FC486D21DBFF16B000005F3 /* LaunchScreen.storyboard in Resources */,
 				3FC486CF1DBFF16B000005F3 /* Assets.xcassets in Resources */,
-				3FC486CD1DBFF16B000005F3 /* Main.storyboard in Resources */,
+				3FC4871D1DBFF857000005F3 /* Maven Pro Bold.otf in Resources */,
+				3FC4871E1DBFF857000005F3 /* Maven Pro Regular.otf in Resources */,
+				3FC4871C1DBFF857000005F3 /* LeagueGothic-Regular.otf in Resources */,
+				3FC487381DC067F3000005F3 /* ScheduleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,32 +253,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FC486CA1DBFF16B000005F3 /* ViewController.m in Sources */,
 				3FC486C71DBFF16B000005F3 /* AppDelegate.m in Sources */,
-				3FC486C41DBFF16B000005F3 /* main.m in Sources */,
+				3FC486FD1DBFF4DE000005F3 /* Team.m in Sources */,
+				3FC4873E1DC07C33000005F3 /* TimeUtil.m in Sources */,
+				3FC487361DC0228F000005F3 /* XMLReader.m in Sources */,
+				3FC4872B1DC004C4000005F3 /* ScheduleTableViewCell.m in Sources */,
+				3FC487061DBFF5BE000005F3 /* APIUtil.m in Sources */,
+				3FC487001DBFF514000005F3 /* Game.m in Sources */,
+				3FC487141DBFF7DB000005F3 /* Constants.m in Sources */,
+				3FC4873B1DC0728B000005F3 /* Date.m in Sources */,
+				3FC487181DBFF849000005F3 /* main.m in Sources */,
+				3FC4872F1DC00514000005F3 /* ScheduleViewController.m in Sources */,
+				3FC487091DBFF5D5000005F3 /* ColorUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		3FC486CB1DBFF16B000005F3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FC486CC1DBFF16B000005F3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3FC486D01DBFF16B000005F3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FC486D11DBFF16B000005F3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3FC486D41DBFF16B000005F3 /* Debug */ = {
@@ -273,6 +365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 4X4RG77KE5;
 				INFOPLIST_FILE = "EaglesSchedule - ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -285,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 4X4RG77KE5;
 				INFOPLIST_FILE = "EaglesSchedule - ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

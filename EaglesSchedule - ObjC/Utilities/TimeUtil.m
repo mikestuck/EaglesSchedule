@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  TimeUtil.m
 //  EaglesSchedule - ObjC
 //
 //  Created by Mike Stuck on 10/25/16.
 //  Copyright © 2016 Mike Stuck. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TimeUtil.h"
 
-@interface ViewController : UIViewController
-
+@implementation TimeUtil
 
 @end
-
