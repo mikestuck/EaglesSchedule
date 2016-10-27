@@ -4,6 +4,11 @@ A schedule viewer using XML data.
 
 ## Key project details
 
+- Using a static XML file to populate. 
+
+- Game time is altered to users current timezone.
+
+- Team logos are dynamically loaded from server.
 
 ## Getting Started
 
