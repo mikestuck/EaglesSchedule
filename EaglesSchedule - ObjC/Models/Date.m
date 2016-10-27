@@ -10,10 +10,23 @@
 
 @implementation Date
 
-+ (Date *)parseDateWithDictionary:(NSDictionary *) dateDictionary{
++ (Date *)parseDateWithNSDate:(NSDate *) dateObj{
     Date *date = [[Date alloc] init];
-    
+    date.time = [self getTime:dateObj];
+    date.text = [self getDate:dateObj];
     return date;
+}
+
++ (NSString *)getTime: (NSDate *)date{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"h:mm a"];
+    return [formatter stringFromDate:date];
+}
+
++ (NSString *)getDate: (NSDate *)date{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"EEE, MMM d"];
+    return [formatter stringFromDate:date];
 }
 
 @end

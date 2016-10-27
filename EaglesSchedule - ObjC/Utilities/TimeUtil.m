@@ -10,4 +10,11 @@
 
 @implementation TimeUtil
 
++ (NSDate *)convertToTimeZone:(NSString *)timestamp{
+    NSISO8601DateFormatter *formatter = [[NSISO8601DateFormatter alloc] init];
+    NSDate *date = [formatter dateFromString:timestamp];
+    NSTimeInterval timeZoneSeconds = [[NSTimeZone localTimeZone] secondsFromGMT];
+    return [date dateByAddingTimeInterval:timeZoneSeconds];
+}
+
 @end

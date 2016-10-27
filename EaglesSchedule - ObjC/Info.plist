@@ -28,6 +28,8 @@
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>yc-app-resources.s3.amazonaws.com/</key>
+			<string></string>
 			<key>files.yinzcam.com.s3.amazonaws.com/</key>
 			<string></string>
 		</dict>

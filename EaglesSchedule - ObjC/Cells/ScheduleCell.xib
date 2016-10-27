@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="homeTeam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsV-6O-IdJ">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="awayTeam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsV-6O-IdJ">
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="7VI-07-bh2"/>
                         <constraint firstAttribute="height" constant="22" id="yIE-HH-EsE"/>
@@ -29,7 +29,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="awayTeam" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5W-sS-c1K">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="homeTeam" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5W-sS-c1K">
                     <constraints>
                         <constraint firstAttribute="height" constant="22" id="JZs-n4-8e7"/>
                         <constraint firstAttribute="width" constant="150" id="b6f-UC-lQB"/>
@@ -38,7 +38,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="homeScore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzB-4o-ziN">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="awayScore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzB-4o-ziN">
                     <constraints>
                         <constraint firstAttribute="width" constant="92" id="Fsf-SE-zWR"/>
                         <constraint firstAttribute="height" constant="36" id="enQ-KB-hlx"/>
@@ -56,7 +56,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="awayScore" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Q4-mT-Aex">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="homeScore" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Q4-mT-Aex">
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="MxX-R1-c76"/>
                         <constraint firstAttribute="width" constant="92" id="TLh-Hw-WwD"/>
@@ -141,14 +141,14 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="ampersand" destination="1h0-0N-IIM" id="dxa-Rk-sQT"/>
-                <outlet property="awayLogo" destination="TLm-Xr-MPv" id="zHZ-NH-T0y"/>
-                <outlet property="awayScore" destination="1Q4-mT-Aex" id="PVF-W4-Qhi"/>
-                <outlet property="awayTeam" destination="k5W-sS-c1K" id="y7g-i8-Qdp"/>
+                <outlet property="awayLogo" destination="7XM-vn-y42" id="Ksb-b7-u2L"/>
+                <outlet property="awayScore" destination="NzB-4o-ziN" id="IEL-B3-psM"/>
+                <outlet property="awayTeam" destination="MsV-6O-IdJ" id="bgg-Sc-quy"/>
                 <outlet property="bye" destination="e68-F0-Sji" id="Z6L-pe-Axc"/>
                 <outlet property="date" destination="Hap-BV-5Ou" id="gi9-04-oHP"/>
-                <outlet property="homeLogo" destination="7XM-vn-y42" id="54v-1C-Vgo"/>
-                <outlet property="homeScore" destination="NzB-4o-ziN" id="oX4-xK-LDU"/>
-                <outlet property="homeTeam" destination="MsV-6O-IdJ" id="kvf-tP-Ue2"/>
+                <outlet property="homeLogo" destination="TLm-Xr-MPv" id="Qkx-xL-z4w"/>
+                <outlet property="homeScore" destination="1Q4-mT-Aex" id="650-DX-ldu"/>
+                <outlet property="homeTeam" destination="k5W-sS-c1K" id="ckH-Cd-iPM"/>
                 <outlet property="status" destination="Hzf-8x-lX8" id="26u-CI-Mnz"/>
                 <outlet property="week" destination="3Qh-kL-2ii" id="F2P-0O-oVK"/>
             </connections>

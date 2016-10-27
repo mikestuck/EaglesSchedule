@@ -27,4 +27,10 @@ extern int LAYOUT_CELL_HEIGHT;
 extern int LAYOUT_HEADER_HEIGHT;
 extern int LAYOUT_X_PADDING;
 
+extern NSString *const GAME_TYPE_B;
+extern NSString *const GAME_TYPE_S;
+extern NSString *const GAME_TYPE_F;
+
+extern NSString *const APP_TEAM;
+
 @end

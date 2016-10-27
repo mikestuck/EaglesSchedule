@@ -19,7 +19,7 @@
         team.name = teamDictionary[@"Name"];
     }
     if(teamDictionary[@"TriCode"]!= nil){
-        team.triCode = teamDictionary[@"TriCode"];
+        team.triCode = [teamDictionary[@"TriCode"] lowercaseString];
     }
     if(teamDictionary[@"City"]!= nil){
         team.city = teamDictionary[@"City"];

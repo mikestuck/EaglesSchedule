@@ -10,19 +10,11 @@
 
 @implementation ScheduleTableViewCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        self.bye.hidden = true;
-    }
-    return self;
-}
-
 - (void)showByeWeek{
     self.bye.hidden = false;
     
     self.week.hidden = true;
+    self.date.hidden= true;
     self.homeScore.hidden = true;
     self.homeTeam.hidden = true;
     self.homeLogo.hidden = true;
@@ -30,7 +22,24 @@
     self.awayScore.hidden = true;
     self.awayLogo.hidden = true;
     self.status.hidden = true;
+    self.ampersand.hidden = true;
 }
+
+- (void)showGameWeek{
+    self.bye.hidden = true;
+    
+    self.week.hidden = false;
+    self.date.hidden= false;
+    self.homeScore.hidden = false;
+    self.homeTeam.hidden = false;
+    self.homeLogo.hidden = false;
+    self.awayTeam.hidden = false;
+    self.awayScore.hidden = false;
+    self.awayLogo.hidden = false;
+    self.status.hidden = false;
+    self.ampersand.hidden = false;
+}
+
 
 
 @end

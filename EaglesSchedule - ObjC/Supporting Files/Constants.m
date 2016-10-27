@@ -20,7 +20,7 @@ NSString *const MIXPANEL_APP_FOREGROUND = @"APP IN FOREGROUND";
 
 #pragma mark - API Constants
 
-NSString *const API_LOGO_BASE_URL = @"http://yc-­‐app-­‐resources.s3.amazonaws.com/nfl/logos/";
+NSString *const API_LOGO_BASE_URL = @"http://yc-app-resources.s3.amazonaws.com/nfl/logos/";
 NSString *const API_MOCK_DATA_URL = @"http://files.yinzcam.com.s3.amazonaws.com/iOS/interviews/ScheduleExercise/schedule.xml";
 
 #pragma mark - Font Constants
@@ -34,5 +34,15 @@ NSString *const FONT_MAVEN_PRO_REGULAR = @"MavenProRegular";
 int LAYOUT_CELL_HEIGHT = 120;
 int LAYOUT_HEADER_HEIGHT = 30;
 int LAYOUT_X_PADDING = 10;
+
+#pragma mark - Game Constants
+
+NSString *const GAME_TYPE_B = @"B";
+NSString *const GAME_TYPE_S = @"S";
+NSString *const GAME_TYPE_F = @"F";
+
+#pragma mark - UserDefaults Constants
+
+NSString *const APP_TEAM = @"APP_TEAM";
 
 @end

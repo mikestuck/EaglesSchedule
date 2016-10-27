@@ -12,17 +12,19 @@
 #import "ColorUtil.h"
 
 @interface ScheduleTableViewCell : UITableViewCell
-
 @property (weak, nonatomic) IBOutlet UILabel *homeTeam;
 @property (weak, nonatomic) IBOutlet UILabel *homeScore;
+@property (weak, nonatomic) IBOutlet UIImageView *homeLogo;
 @property (weak, nonatomic) IBOutlet UILabel *awayTeam;
 @property (weak, nonatomic) IBOutlet UILabel *awayScore;
+@property (weak, nonatomic) IBOutlet UIImageView *awayLogo;
 @property (weak, nonatomic) IBOutlet UILabel *status;
 @property (weak, nonatomic) IBOutlet UILabel *week;
 @property (weak, nonatomic) IBOutlet UILabel *date;
 @property (weak, nonatomic) IBOutlet UILabel *ampersand;
 @property (weak, nonatomic) IBOutlet UILabel *bye;
-@property (weak, nonatomic) IBOutlet UIImageView *homeLogo;
-@property (weak, nonatomic) IBOutlet UIImageView *awayLogo;
+
+- (void)showByeWeek;
+- (void)showGameWeek;
 
 @end

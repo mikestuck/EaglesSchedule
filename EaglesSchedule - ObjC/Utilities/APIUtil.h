@@ -14,7 +14,11 @@
 
 @interface APIUtil : NSObject
 
-+ (NSMutableArray *)getSchedule;
++ (NSMutableArray *)getPreSeasonSchedule;
++ (NSMutableArray *)getRegSeasonSchedule;
++ (Team *)getTeam;
 + (UIImage *)getTeamLogo;
++ (NSString *)getRegularSeasonHeader;
++ (NSString *)getPreseasonHeader;
 
 @end

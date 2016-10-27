@@ -10,4 +10,6 @@
 
 @interface TimeUtil : NSObject
 
++ (NSDate *)convertToTimeZone:(NSDate *) timestamp;
+
 @end

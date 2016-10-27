@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Team.h"
 #import "Date.h"
+#import "TimeUtil.h"
 
 @interface Game : NSObject
 
@@ -16,7 +17,7 @@
 @property (strong, nonatomic) NSString *week;
 @property (strong, nonatomic) NSString *label;
 @property (strong, nonatomic) NSString *type;
-//@property (strong, nonatomic) BOOL *isHome;
+@property (nonatomic) BOOL isHome;
 @property (strong, nonatomic) NSString *tv;
 @property (strong, nonatomic) NSString *radio;
 @property (strong, nonatomic) NSString *venue;

@@ -11,10 +11,14 @@
 #import "APIUtil.h"
 #import "ColorUtil.h"
 #import "ScheduleTableViewCell.h"
+#import "Team.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface ScheduleViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>{
     UITableView *scheduleTable;
-    NSMutableArray *scheduleArray;
+    NSMutableArray *preSeasonSchedule;
+    NSMutableArray *regSeasonSchedule;
+    Team *appTeam;
 }
 
 @end

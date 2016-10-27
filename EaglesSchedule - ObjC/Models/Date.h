@@ -15,6 +15,8 @@
 @property (strong, nonatomic) NSString *time;
 @property (strong, nonatomic) NSDate *timestamp;
 
-+ (Date *)parseDateWithDictionary:(NSDictionary *) dateDictionary;
++ (Date *)parseDateWithNSDate:(NSDate *) dateObj;
++ (NSString *)getTime: (NSDate *)date;
++ (NSString *)getDate: (NSDate *)date;
 
 @end
