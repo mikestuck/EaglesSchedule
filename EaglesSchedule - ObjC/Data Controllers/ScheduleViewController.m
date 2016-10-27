@@ -64,8 +64,7 @@
         return LAYOUT_CELL_HEIGHT;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ScheduleTableViewCell *cell = (ScheduleTableViewCell *)[scheduleTable dequeueReusableCellWithIdentifier:@"ScheduleCell"];
     if(cell == nil) {
         cell = [[ScheduleTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ScheduleCell"];
@@ -76,11 +75,11 @@
         [cell showByeWeek];
     }
     else if ([cellGame.type isEqualToString:GAME_TYPE_F]){
-        [self setupFinalGameCell:cell withObject:cellGame];
+        [cell setupFinalGameWithObject:cellGame appTeam:appTeam];
         [cell showGameWeek];
     }
     else{
-        [self setupScheduleGameCell:cell withObject:cellGame];
+        [cell setupScheduledGameWithObject:cellGame appTeam:appTeam];
         [cell showGameWeek];
     }
     cell.week.text = cellGame.week;
@@ -96,7 +95,7 @@
 
 #pragma mark - UITableViewHeader
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UILabel *headerLabel = [[UILabel alloc] init];
     headerLabel.frame = CGRectMake(0, 7, self.view.bounds.size.width, 14);
     headerLabel.font = [UIFont fontWithName:FONT_MAVEN_PRO_BOLD size:14];
@@ -124,17 +123,33 @@
 
 #pragma mark - Getters
 
+/**
+ Sets arrays with preseason and regular season game objects
+ */
+
 - (void)getSchedule{
     regSeasonSchedule = [APIUtil getRegSeasonSchedule];
     preSeasonSchedule = [APIUtil getPreSeasonSchedule];
     [scheduleTable reloadData];
 }
 
+/**
+ Sets the appTeam to the team the schedule response is for
+ */
+
 - (void)getTeam{
     appTeam = [APIUtil getTeam];
 }
 
 #pragma mark - Helpers
+
+/**
+ Gets the correct game object from arrays based on indexPath section
+
+ @param indexPath passed in indexPath
+
+ @return Game object
+ */
 
 - (Game *)returnCorrectObject:(NSIndexPath *)indexPath{
     Game *cellGame;
@@ -146,86 +161,5 @@
     }
     return cellGame;
 }
-
-- (void)setupFinalGameCell: (ScheduleTableViewCell *)cell withObject:(Game *)cellGame{
-    cell.homeScore.font = [UIFont fontWithName:FONT_LEAGUE_GOTHIC size:30.0f];
-    cell.awayScore.font = [UIFont fontWithName:FONT_LEAGUE_GOTHIC size:30.0f];
-    cell.homeScore.textColor = [ColorUtil darkTextColor];
-    cell.awayScore.textColor = [ColorUtil darkTextColor];
-    cell.status.text = cellGame.gameState;
-    cell.date.text = cellGame.date.text;
-    if(cellGame.isHome){
-        cell.homeTeam.text = appTeam.name;
-        cell.awayTeam.text = cellGame.opponent.name;
-        [self setupLogoAsHomeTeam:cell withObject:cellGame];
-    }
-    else{
-        cell.homeTeam.text = cellGame.opponent.name;
-        cell.awayTeam.text = appTeam.name;
-        [self setupLogoAsAwayTeam:cell withObject:cellGame];
-    }
-    cell.homeScore.text = cellGame.homeScore;
-    cell.awayScore.text = cellGame.awayScore;
-}
-
-- (void)setupScheduleGameCell: (ScheduleTableViewCell *)cell withObject:(Game *)cellGame{
-    cell.homeScore.font = [UIFont fontWithName:FONT_MAVEN_PRO_BOLD size:14.0f];
-    cell.awayScore.font = [UIFont fontWithName:FONT_MAVEN_PRO_BOLD size:14.0f];
-    cell.homeScore.textColor = [ColorUtil lightTextColor];
-    cell.awayScore.textColor = [ColorUtil lightTextColor];
-    cell.status.text = cellGame.date.time;
-    cell.date.text = cellGame.date.text;
-    if(cellGame.isHome){
-        cell.homeTeam.text = appTeam.name;
-        cell.homeScore.text = appTeam.record;
-        cell.awayTeam.text = cellGame.opponent.name;
-        cell.awayScore.text = cellGame.opponent.record;
-        [self setupLogoAsHomeTeam:cell withObject:cellGame];
-    }
-    else{
-        cell.homeTeam.text = cellGame.opponent.name;
-        cell.homeScore.text = cellGame.opponent.record;
-        cell.awayTeam.text = appTeam.name;
-        cell.awayScore.text = appTeam.record;
-        [self setupLogoAsAwayTeam:cell withObject:cellGame];
-
-    }
-}
-
-- (void)setupLogoAsHomeTeam:(ScheduleTableViewCell *)cell withObject:(Game *)cellGame{
-    NSURLRequest *homeLogoRequest = [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@nfl_%@_light.png", API_LOGO_BASE_URL, appTeam.triCode]]];
-    [cell.homeLogo setImageWithURLRequest:homeLogoRequest placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
-        cell.homeLogo.image = image;
-    } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
-        
-    }];
-    
-    NSURLRequest *awayLogoRequest = [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@nfl_%@_light.png", API_LOGO_BASE_URL, cellGame.opponent.triCode]]];
-    [cell.awayLogo setImageWithURLRequest:awayLogoRequest placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
-        cell.awayLogo.image = image;
-    } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
-        
-    }];
-    
-}
-
-- (void)setupLogoAsAwayTeam:(ScheduleTableViewCell *)cell withObject:(Game *)cellGame{
-    NSURLRequest *homeLogoRequest = [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@nfl_%@_light.png", API_LOGO_BASE_URL, appTeam.triCode]]];
-    [cell.awayLogo setImageWithURLRequest:homeLogoRequest placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
-        cell.awayLogo.image = image;
-    } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
-        
-    }];
-    
-    NSURLRequest *awayLogoRequest = [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@nfl_%@_light.png", API_LOGO_BASE_URL, cellGame.opponent.triCode]]];
-    [cell.homeLogo setImageWithURLRequest:awayLogoRequest placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
-        cell.homeLogo.image = image;
-    } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
-        
-    }];
-}
-
-
-
 
 @end

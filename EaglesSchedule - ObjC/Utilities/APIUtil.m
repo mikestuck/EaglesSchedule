@@ -10,6 +10,12 @@
 
 @implementation APIUtil
 
+/**
+ Gets preseason schedule and parses into array of game objects
+ 
+ @return array of game objects
+ */
+
 + (NSMutableArray *)getPreSeasonSchedule{
     NSMutableArray *scheduleArray = [[NSMutableArray alloc] init];
     NSURL *URL = [NSURL URLWithString:API_MOCK_DATA_URL];
@@ -25,6 +31,12 @@
     }
     return scheduleArray;
 }
+
+/**
+ Gets regular season schedule and parses into array of game objects
+
+ @return array of game objects
+ */
 
 + (NSMutableArray *)getRegSeasonSchedule{
     NSMutableArray *scheduleArray = [[NSMutableArray alloc] init];
@@ -42,6 +54,12 @@
     return scheduleArray;
 }
 
+/**
+ Gets application team, teams whos schedule is returned
+
+ @return team object
+ */
+
 + (Team *)getTeam{
     NSURL *URL = [NSURL URLWithString:API_MOCK_DATA_URL];
     NSData *data = [[NSData alloc] initWithContentsOfURL:URL];
@@ -51,6 +69,12 @@
     NSDictionary *appTeam = listDictionary[@"Team"];
     return [Team parseTeamWithDictionary:appTeam];
 }
+
+/**
+ Gets header for regular season
+
+ @return string value to be placed in tableView section 0 header
+ */
 
 + (NSString *)getRegularSeasonHeader{
     NSURL *URL = [NSURL URLWithString:API_MOCK_DATA_URL];
@@ -63,6 +87,12 @@
     return [NSString stringWithFormat:@"%@", headingArray.firstObject];
 }
 
+/**
+ Gets header for preseason
+ 
+ @return string value to be placed in tableView section 1 header
+ */
+
 + (NSString *)getPreseasonHeader{
     NSURL *URL = [NSURL URLWithString:API_MOCK_DATA_URL];
     NSData *data = [[NSData alloc] initWithContentsOfURL:URL];
@@ -72,10 +102,6 @@
     NSDictionary *gameDictionary = listDictionary[@"GameSection"];
     NSArray *headingArray = [gameDictionary valueForKey:@"Heading"];
     return [NSString stringWithFormat:@"%@", headingArray.lastObject];
-}
-
-+ (UIImage *)getTeamLogo{
-    return nil;
 }
 
 @end

@@ -10,6 +10,7 @@
 #import "Game.h"
 #import "Constants.h"
 #import "ColorUtil.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface ScheduleTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *homeTeam;
@@ -26,5 +27,7 @@
 
 - (void)showByeWeek;
 - (void)showGameWeek;
+- (void)setupFinalGameWithObject:(Game *)game appTeam:(Team *)appTeam;
+- (void)setupScheduledGameWithObject:(Game *)game appTeam:(Team *)appTeam;
 
 @end

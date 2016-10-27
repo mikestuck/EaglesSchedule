@@ -10,6 +10,14 @@
 
 @implementation TimeUtil
 
+/**
+ Converts String timestamp from response to local timezome
+
+ @param timestamp response string
+
+ @return converted to timezone date object
+ */
+
 + (NSDate *)convertToTimeZone:(NSString *)timestamp{
     NSISO8601DateFormatter *formatter = [[NSISO8601DateFormatter alloc] init];
     NSDate *date = [formatter dateFromString:timestamp];

@@ -10,6 +10,10 @@
 
 @implementation Constants
 
+/*
+ Class to house all constants used
+ */
+
 #pragma mark - Mixpanel Constants
 
 NSString *const MIXPANEL_API_KEY = @"263328dff2ed7ed873984efdd0804e43";

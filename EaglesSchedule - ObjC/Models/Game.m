@@ -10,6 +10,14 @@
 
 @implementation Game
 
+/**
+ Nil check and parse out game dictionary
+ 
+ @param gameDictionary passed in dictionary
+ 
+ @return newly created game object
+ */
+
 + (Game *)parseGameWithDictionary:(NSDictionary *) gameDictionary{
     Game *game = [[Game alloc] init];
     if(gameDictionary[@"AwayScore"]!= nil){

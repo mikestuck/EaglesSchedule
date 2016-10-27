@@ -10,6 +10,14 @@
 
 @implementation Team
 
+/**
+ Nil check and parse out team dictionary
+
+ @param teamDictionary passed in dictionary
+
+ @return newly created team object
+ */
+
 + (Team *)parseTeamWithDictionary:(NSDictionary *) teamDictionary{
     Team *team = [[Team alloc] init];
     if(teamDictionary[@"FullName"]!= nil){
