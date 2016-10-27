@@ -10,6 +10,9 @@
 #import "ScheduleViewController.h"
 #import "ColorUtil.h"
 #import "Constants.h"
+#import "Mixpanel/Mixpanel.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
