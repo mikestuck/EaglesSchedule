@@ -23,7 +23,7 @@ Fabric,
 Crashlytics,
 AFNetworking
 
-Due to including these analytic based pods you must first install cocoapods. In order to install cocoapods enter the following line into Terminal.
+Due to including these pods you must first install cocoapods. In order to install cocoapods enter the following line into Terminal.
 
 ```
 Open Terminal
